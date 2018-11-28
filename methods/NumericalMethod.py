@@ -68,7 +68,7 @@ class numericalMethod(ABC):
 
 
     def showTable(self):
-        print(tabulate(list(self.solution.values()), headers=['№ iter', 'x1', 'x2', 'Q(x1)', 'Q(x2)'], tablefmt='orgtbl'))
+        print(tabulate(list(self.solution.values()), headers=['№ iter', 'a', 'b', 'Q(a)', 'Q(b)'], tablefmt='orgtbl'))
 
 
     def showReference(self):
