@@ -1,8 +1,5 @@
 from methods.Dichotomy1 import dichotomy1
 from methods.Fibonacci import fibonacci
-import os
-import time
-import subprocess
 
 EXIT = 0
 BACK = 9
