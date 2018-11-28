@@ -20,7 +20,13 @@ class numericalMethod(ABC):
     x_ = 0
     Q_ = 0
 
-    def __init__(self):
+    def __init__(self, targetFunction, a, b, delta, eps):
+        self.targetExpression = targetFunction
+        self.a = a
+        self.b = b
+        self.delta = delta
+        self.eps = eps
+
         self.expression = Parser().parse(self.targetExpression)
 
 

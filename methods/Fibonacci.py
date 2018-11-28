@@ -6,6 +6,10 @@ from methods.NumericalMethod import numericalMethod
 class fibonacci(numericalMethod):
     n = 11
 
+    def __init__(self, targetFunction, a, b, delta, eps, n):
+        super().__init__(targetFunction, a, b, delta, eps)
+        self.n = n
+
     def fibonacciNumbers(self, n):
         F1 = 1
         F2 = 1
