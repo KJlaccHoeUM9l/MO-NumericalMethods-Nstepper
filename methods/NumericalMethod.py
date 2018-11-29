@@ -8,13 +8,15 @@ from abc import ABC, ABCMeta, abstractmethod
 class numericalMethod(ABC):
     __metaclass__ = ABCMeta
 
+    # Input data
     targetExpression = 'x^2 + 47'
     a = -1
     b = 1
     delta = 0.01
     eps = 0.001
 
-    solution = {}
+    # Output data
+    solution = []
     N = 0
     solutionEval = []
     x_ = 0
@@ -27,6 +29,8 @@ class numericalMethod(ABC):
         self.delta = delta
         self.eps = eps
 
+        self.solution.clear()
+        self.solutionEval.clear()
         self.expression = Parser().parse(self.targetExpression)
 
 
@@ -59,7 +63,7 @@ class numericalMethod(ABC):
 
     def showNumericalMethod(self):
         newPlot = self.initPlot('Work of the numerical method', 0.01)
-        for values in self.solution.values():
+        for values in self.solution:
             newPlot.plot(values[1], values[3], 'go')
             newPlot.plot(values[2], values[4], 'go')
 
@@ -68,7 +72,7 @@ class numericalMethod(ABC):
 
 
     def showTable(self):
-        print(tabulate(list(self.solution.values()), headers=['№ iter', 'a', 'b', 'Q(a)', 'Q(b)'], tablefmt='orgtbl'))
+        print(tabulate(self.solution, headers=['№ iter', 'a', 'b', 'Q(a)', 'Q(b)'], tablefmt='orgtbl'))
 
 
     def showReference(self):

@@ -17,14 +17,14 @@ def useMethod(method):
     method.showTable()
     method.showNumericalMethod()
 
+
 if __name__ == '__main__':
-    global method
-    targetFunction = 'x^2 + 47'
+    targetFunction = 'x^2 - 2 * x + 1'
     a = -1
     b = 1
     delta = 0.001
     eps = 0.00001
-    n = 11
+    n = 7
 
     select = -1
     while (select != EXIT):
@@ -35,7 +35,8 @@ if __name__ == '__main__':
         select = int(input('Your action: '))
 
         if select == INPUT:
-            targetFunction = input('Enter target function Q(x) = ')
+            print('Enter target function: like x^2-2*x+1')
+            targetFunction = input('--->Q(x) = ')
             a = float(input('Enter left boundary[a]: '))
             b = float(input('Enter right boundary[b]: '))
         elif select == METHODS:

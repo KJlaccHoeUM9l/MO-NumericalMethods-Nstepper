@@ -51,7 +51,7 @@ class fibonacci(numericalMethod):
 
             k += 1
             iteration += 1
-            self.solution[iteration] = [iteration, left, right, self.Q(left), self.Q(right)]
+            self.solution.append([iteration, left, right, self.Q(left), self.Q(right)])
 
         # Last iteration
         x2 += self.eps
@@ -68,7 +68,7 @@ class fibonacci(numericalMethod):
             right = x1
 
         iteration += 1
-        self.solution[iteration] = [iteration, left, right, self.Q(left), self.Q(right)]
+        self.solution.append([iteration, left, right, self.Q(left), self.Q(right)])
 
         # Reference data
         self.N = iteration

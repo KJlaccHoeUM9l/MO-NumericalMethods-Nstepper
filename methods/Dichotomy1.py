@@ -21,7 +21,7 @@ class dichotomy1(numericalMethod):
                 left = x1
 
             iteration += 1
-            self.solution[iteration] = [iteration, left, right, self.Q(left), self.Q(right)]
+            self.solution.append([iteration, left, right, self.Q(left), self.Q(right)])
 
         # Reference data
         self.N = iteration
